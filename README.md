@@ -20,9 +20,9 @@ Um ataque cardíaco ocorre quando uma artéria que fornece sangue e oxigênio ao
 
 O objetivo deste trabalho é criar um classificador para predizer se um paciente tem baixo ou alto risco de ataque cardíaco com base em informações clínicas.
 
-O dataset utilizado neste trabalho é público e disponível no [Kaggle](https://www.kaggle.com/rashikrahmanpritom/heart-attack-analysis-prediction-dataset) com informações clinícas de pacientes e o respectivo diagnóstico médico de baixo ou alto risco de ataque cardíaco.
+O dataset utilizado neste trabalho é público e disponível no [Kaggle](https://www.kaggle.com/rashikrahmanpritom/heart-attack-analysis-prediction-dataset) com informações clinicas de pacientes e o respectivo diagnóstico médico de baixo ou alto risco de ataque cardíaco.
 
-A metodolodia utilizada consiste em realizar uma análise exploratória dos dados, tratamento dos dados, experimentação de diversos modelos de classificação e análise dos resultados e hiperparâmetros.
+A metodologia utilizada consiste em realizar uma análise exploratória dos dados, tratamento dos dados, experimentação de diversos modelos de classificação e análise dos resultados e hiperparâmetros.
 
 ### 1. Introdução
 
