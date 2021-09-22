@@ -70,7 +70,22 @@ Este trabalho utiliza a linguagem python e como principais bibliotecas o scikit-
 
 ### 2. Modelagem
 
-O seguintes modelos de classificação serão testados:
+Após análise exploratória dos dados foi possível chegar às seguintes conclusões:
+
+* Não há missing values no dataset.
+* Variáveis **chol**, **trtbps**,  **fbs** e **restecg** têm baixa correlação e significância estatística com a prossibilidade de ataque cardíaco e não farão parte do modelo. 
+* Outliers das variáveis **thalachh** e **oldpeak** foram removidos.
+* Não há relação linear entre as variáveis númericas selecionadas.
+* Como de se esperar, pessoas mais velhas possuem mais risco de ataque cardíaco.
+* Pessoas com maior frequência cardiaca (**thalachh**) têm mais risco.
+* Pessoas com menor **oldpeak** têm mais risco.  
+* Pessoas com dores **cp** = 2 têm maior chance de ataque cardíaco.
+* Pessoas com **caa** = 0 têm maior chance de ataque cardíaco.
+* Pessoas com **sex** = 1 (provavelmente homens) têm maior chance de ataque cardíaco.
+* Pessoas com **enxg** = 0 têm maior chance de ataque cardíaco.
+* Pessoas com **thall** = 2 têm maior chance de ataque cardíaco.
+
+O seguintes modelos de classificação foram testados:
 - **Decision Tree**
 - **XGBoost**
 - **KNN**
@@ -78,19 +93,19 @@ O seguintes modelos de classificação serão testados:
 - **SVM**
 - **Logistic Regression**
 
-Para realizar o pré-processamento dos dados tanto de treino quanto de teste aerá utilizado uma abordagem de **pipeline** do python de processamento e transformação dos dados.  
+Para realizar o pré-processamento dos dados tanto de treino quanto de teste foi utilizado uma abordagem de **pipeline** do python de processamento e transformação dos dados.  
 
-Os missing values de dados categóricos serão substituídos pela **moda** enquanto que para as features numéricas a **mediana**.
+Apesar de não haver missing values, o pipeline foi configurado para no caso de missing values de dados categóricos substituir pela **moda** enquanto que para as características numéricas a **mediana**.
 
 As features categóricas foram codificadas em números através da técnica **one hot encoding**, removendo uma das colunas para eliminar a **multicolinearidade** dos dados.
 
-Apesar da análise e redução de features realizada anteriormente, para todos os modelos uma nova redução de dimensão será aplicada ao pipeline de modo a extrair as features relevantes para cada modelo. Para os modelos de **Decision Tree** e **XGBoost** será aplicado uma redução baseada no teste **anova** para dados numéricos e **chi square** para dados categóricos. Para **KNN**, **SVM** e **Logistic Regression** o **PCA** e para **Random Forest** nenhuma redução de dimensionalidade será aplicada.
+Apesar da análise e redução de features realizada anteriormente, para todos os modelos uma nova redução de dimensão foi aplicada ao pipeline de modo a extrair as variáveis relevantes para cada modelo. Para os modelos de **Decision Tree** e **XGBoost** será aplicado uma redução baseada no teste **anova** para dados numéricos e **chi square** para dados categóricos. Para **KNN**, **SVM** e **Logistic Regression** o **PCA** e para **Random Forest** nenhuma redução de dimensionalidade será aplicada.
 
-Para os modelos que são mais sensíveis a grandeza dos atributos ou que utilizaram PCA para redução da dimensionalidade será aplicado a normalização dos dados: KNN, SVM e Logistic Regression. A padronização Z score foi a que trouxe melhores resultados.
+Para os modelos que são mais sensíveis a grandeza dos atributos ou que utilizaram PCA para redução da dimensionalidade foi aplicado a normalização dos dados: KNN, SVM e Logistic Regression. A padronização Z score foi a que trouxe melhores resultados.
 
-Uma busca exaustiva, utilizando o **GridSearchCV**, será utilizada para melhor escolher o tamanho da redução da dimensionalidade e os **hiperparâmetros** dos modelos.
+Uma busca exaustiva, utilizando o **GridSearchCV**, foi utilizada para melhor escolher o tamanho da redução da dimensionalidade e os **hiperparâmetros** dos modelos.
 
-Por fim, será utilizado **cross validation** com 3 folds (**k-fold**).
+Por fim, foi utilizado **cross validation** com 3 folds (**k-fold**).
 
 ### 3. Resultados
 
