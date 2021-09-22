@@ -30,9 +30,9 @@ Um enfarte agudo do miocárdio ou infarto agudo do miocárdio, vulgarmente denom
 
 Antes do infarto ocorrer vários sintomas e informações clínicas indicam se o paciente está com baixo ou alto risco. Este trabalho, tem por objetivo realizar uma análise exploratória e um classificador com base em um conjunto de informações dos pacientes utilizando um dataset disponível no [kaggle](https://www.kaggle.com/rashikrahmanpritom/heart-attack-analysis-prediction-dataset).
 
-A primeira parte do trabalho consiste em realizar análise exploratória e tratamento dos dados. Nesta etapa serão analisado missing values e o devido tratamento, quando será necessário aplicar normalização, redução de dimensionalidade e seleção de atributos. Também será verficado se há necessidade de aplicar balanceamento nos dados e remoção de outliers.
+A primeira parte do trabalho consiste em realizar análise exploratória e tratamento dos dados como tratamento de missing values, aplicação de normalização, redução de dimensionalidade e seleção de atributos. Também será verificado se há necessidade de aplicar balanceamento nos dados e remoção de outliers.
 
-A segunda parte do trabalho consiste na modelagem e uso de diversos modelos de aprendizagem supervisionada. Nesta estapa será realizado uma busca e tuning dos melhores hiperparâmetros de cada modelo que melhor se adequa ao problema.
+A segunda parte do trabalho consiste na modelagem e uso de diversos modelos de aprendizagem supervisionada. Nesta etapa será realizado uma busca e tuning dos melhores hiperparâmetros de cada modelo que melhor se adequa ao problema.
 
 Este trabalho utiliza a linguagem python e como principais bibliotecas o scikit-learn para modelagem e seaborn para visualização dos dados.
 
