@@ -137,7 +137,7 @@ solver: newton-cg
 
 ### 4. Conclusões
 
-O classificador conseguiu 88% de acurácia emmdois modelos distintos (**SVM** e **Logistic Regression**). Este resultado pode ser atribuído a alguns fatores:
+O classificador conseguiu 88% de acurácia em dois modelos distintos (**SVM** e **Logistic Regression**). Este resultado pode ser atribuído a alguns fatores:
 - Diminuição de dimensionalidade através de análise exploratória e métodos estatísticos como **ANOVA**, **Chi Square** e pelo **PCA**.
 - Normalização dos dados para os modelos mais sensíveis a grandeza das variáveis ou que utilizaram PCA para redução da dimensionalidade: KNN, SVM e Logistic Regression. A padronização Z score foi a que trouxe melhores resultados.
 - Busca exaustiva dos hiperparâmetros mais adequados para cada algoritmo e dos dados.
