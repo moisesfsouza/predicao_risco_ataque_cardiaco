@@ -97,9 +97,9 @@ Para realizar o pré-processamento dos dados tanto de treino quanto de teste foi
 
 Apesar de não haver missing values, o pipeline foi configurado para no caso de missing values de dados categóricos substituir pela **moda** enquanto que para as características numéricas a **mediana**.
 
-As features categóricas foram codificadas em números através da técnica **one hot encoding**, removendo uma das colunas para eliminar a **multicolinearidade** dos dados.
+Os atributos categóricas foram codificados em números através da técnica **one hot encoding**, removendo uma das colunas para eliminar a **multicolinearidade** dos dados.
 
-Apesar da análise e redução de features realizada anteriormente, para todos os modelos uma nova redução de dimensão foi aplicada ao pipeline de modo a extrair as variáveis relevantes para cada modelo. Para os modelos de **Decision Tree** e **XGBoost** será aplicado uma redução baseada no teste **anova** para dados numéricos e **chi square** para dados categóricos. Para **KNN**, **SVM** e **Logistic Regression** o **PCA** e para **Random Forest** nenhuma redução de dimensionalidade será aplicada.
+Apesar da análise e redução de variáveis realizada anteriormente, para todos os modelos uma nova redução de dimensão foi aplicada ao pipeline de modo a extrair as variáveis relevantes para cada modelo. Para os modelos de **Decision Tree** e **XGBoost** será aplicado uma redução baseada no teste **anova** para dados numéricos e **chi square** para dados categóricos. Para **KNN**, **SVM** e **Logistic Regression** o **PCA** e para **Random Forest** nenhuma redução de dimensionalidade será aplicada.
 
 Para os modelos que são mais sensíveis a grandeza dos atributos ou que utilizaram PCA para redução da dimensionalidade foi aplicado a normalização dos dados: KNN, SVM e Logistic Regression. A padronização Z score foi a que trouxe melhores resultados.
 
