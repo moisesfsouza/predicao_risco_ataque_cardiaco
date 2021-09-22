@@ -68,7 +68,6 @@ Este trabalho utiliza a linguagem python e como principais bibliotecas o scikit-
 
 **output**: classificação (0- baixo, 1 - alto)
 
-
 ### 2. Modelagem
 
 O seguintes modelos de classificação serão testados:
