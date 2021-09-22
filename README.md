@@ -99,7 +99,7 @@ Os modelos com melhor resultado foram o **SVM** e **Logistic Regression** com ac
 
 A tabela abaixo apresenta a acurácia para o conjunto de treino e teste, além do kappa e da precisão e recall de cada classe.
 
-![](resultados.png)
+![teste](resultados.png)
 
 Para o **SVM**, o melhor resultado utilizou 12 componentes principais com seguintes hiperparâmetros após o tuning:
 
